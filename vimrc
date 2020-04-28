@@ -142,6 +142,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " 启用鼠标支持
 set mouse=a
 
+" 剪切板与系统共用
+set clipboard=unnamed
+
 " 括号补全
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
@@ -286,6 +289,9 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 " C#支持
 Plug 'OmniSharp/omnisharp-vim'
 
+" 快速运行
+Plug 'thinca/vim-quickrun'
+
 call plug#end()
 
 
@@ -357,6 +363,16 @@ let g:SignatureMap = {
 " 撤销更改插件
 let g:undotree_DiffAutoOpen = 0
 " "map L :UndotreeToggle<CR>
+
+" 快速运行
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter" : "message",
+\   },
+\}
+let g:quickrun_no_default_key_mappings = 10
+nmap <Leader>r <Plug>(quickrun)
+map <F10> :QuickRun<CR>
 
 "C# omnisharp配置
 let g:OmniSharp_typeLookupInPreview = 1
