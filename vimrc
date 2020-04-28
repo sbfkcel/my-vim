@@ -204,7 +204,7 @@ map <right> :vertical resize+5<CR>
 map tn :tabe<CR>
 map [ :-tabnext<CR>
 map ] :+tabnext<CR>
-map tc tabclose<CR>
+map tc :tabclose<CR>
 
 
 " 插件安装
@@ -356,7 +356,7 @@ let g:SignatureMap = {
 
 " 撤销更改插件
 let g:undotree_DiffAutoOpen = 0
-map L :UndotreeToggle<CR>
+" "map L :UndotreeToggle<CR>
 
 "C# omnisharp配置
 let g:OmniSharp_typeLookupInPreview = 1
