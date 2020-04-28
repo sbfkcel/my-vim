@@ -145,6 +145,9 @@ set mouse=a
 " 剪切板与系统共用
 set clipboard=unnamed
 
+" 禁止生成交换文件
+set noswapfile
+
 " 括号补全
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
@@ -370,7 +373,7 @@ let g:quickrun_config = {
 \       "outputter" : "message",
 \   },
 \}
-let g:quickrun_no_default_key_mappings = 10
+let g:quickrun_no_default_key_mappings = 1
 nmap <Leader>r <Plug>(quickrun)
 map <F10> :QuickRun<CR>
 
