@@ -82,8 +82,10 @@ set listchars=tab:▸\ ,trail:-
 set tw=0
 set indentexpr=
 
-" 缩进设置（缩进折叠方法）
+" 折叠方式设置，并记住文件折叠信息
 set foldmethod=indent
+au BufWinLeave * silent mkview
+au BufWinEnter * silent loadview
 
 " 设置默认不折叠
 set foldlevel=99
@@ -140,7 +142,7 @@ set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " 启用鼠标支持
-set mouse=a
+" set mouse=a
 
 " 剪切板与系统共用
 set clipboard=unnamed
