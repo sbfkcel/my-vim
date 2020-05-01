@@ -34,8 +34,8 @@ syntax on
 " 显示行号
 set number
 
-" 上下行号根据当前行相对显示
-" set norelativenumber
+" 上下行号不根据当前行相对显示
+set norelativenumber
 
 " 开启光标行高亮
 set cursorline
